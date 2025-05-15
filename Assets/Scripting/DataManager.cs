@@ -21,6 +21,15 @@ public class DataManager : MonoBehaviour
 
     public Transform[] Paths(int i)
     {
-         return _pathArray[i]._path;
+        return _pathArray[i]._path;
     }
+
+    public enum ShopState
+    {
+        Open,
+        Closed,
+        Placing
+    }
+
+    private ShopState _state;
 }
