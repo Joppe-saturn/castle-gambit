@@ -44,7 +44,7 @@ public class CheckerMovement : MonoBehaviour
 
     private void CheckTileToMoveTo()
     {
-        if(MathF.Abs((transform.position - _tileToMoveTo.transform.position).magnitude) < 0.1f) 
+        if(MathF.Abs((transform.position - _tileToMoveTo.transform.position).magnitude) < 0.1f) // Berekent of de checker in een bepaalde afstand van de tile af is, zodat hij door kan bewegen.
         {
             _index++;
         }
@@ -53,7 +53,7 @@ public class CheckerMovement : MonoBehaviour
     private void Movement()
     {
         transform.position = Vector3.Lerp(transform.position, _tileToMoveTo.transform.position , speed);
-        transform.position = new Vector3(transform.position.x, _yAxis, transform.position.z);
+        transform.position = new Vector3(transform.position.x, _yAxis, transform.position.z); // Zorgt ervoor dat hij op de juiste Y axis bijft.
     }
 }
 
