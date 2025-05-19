@@ -10,6 +10,10 @@ public class InputManager : MonoBehaviour
         {
             _instance = FindFirstObjectByType<InputManager>();
         }
+        else
+        {
+            Debug.LogError("Instance already exit");
+        }
         return _instance;
     }
 

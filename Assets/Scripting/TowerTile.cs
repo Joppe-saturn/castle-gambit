@@ -12,10 +12,8 @@ public class TowerTile : MonoBehaviour, IClickable
 
     public void OnClick()
     {
-        Debug.Log(3);
         if (_dataManager.CurrentTower != null && placedTower == null)
         {
-            Debug.Log(4);
             if (_dataManager.CurrentTower.Price <= _dataManager.Money)
             {
                 _dataManager.Money -= _dataManager.CurrentTower.Price;
