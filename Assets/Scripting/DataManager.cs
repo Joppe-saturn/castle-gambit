@@ -30,6 +30,42 @@ public class DataManager : MonoBehaviour
         Closed,
         Placing
     }
+    private ShopState _shopState;
+    public ShopState State
+    {
+        get
+        {
+            return _shopState;
+        }
+        set
+        {
+            _shopState = value;
+        }
+    }
 
-    private ShopState _state;
+    private int _money;
+    public int Money
+    {
+        get
+        {
+            return _money;
+        }
+        set
+        {
+            _money = value;
+        }
+    }
+
+    private TowerPlacer.Tower _currentTower;
+    public TowerPlacer.Tower CurrentTower
+    {
+        get
+        {
+            return _currentTower;
+        }
+        set
+        {
+            _currentTower = value;
+        }
+    }
 }
