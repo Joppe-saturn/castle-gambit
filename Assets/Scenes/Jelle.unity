@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72f53d05d891d143a2864a558d5c62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _developerMode: 1
   _toutchPos:
     m_Name: Toutch Pos
     m_Type: 0
@@ -303,6 +304,23 @@ MonoBehaviour:
       m_Action: Toutch Pos
       m_Flags: 0
     m_Flags: 0
+  _mousePos:
+    m_Name: Mouse Pos
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f9675087-a70c-4d62-8773-ce819059806b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 5f813490-0809-4f7e-9993-a3b00f274016
+      m_Path: <Mouse>/{Point}
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Pos
+      m_Flags: 0
+    m_Flags: 0
   _toutchPrimary:
     m_Name: Toutch Primary
     m_Type: 0
@@ -318,6 +336,23 @@ MonoBehaviour:
       m_Processors: 
       m_Groups: 
       m_Action: Toutch Primary
+      m_Flags: 0
+    m_Flags: 0
+  _click:
+    m_Name: Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 577e44dd-096d-486e-9394-9a10a9a00cab
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 3c9996ce-1dff-4d0b-b8b0-489bb090dba2
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Click
       m_Flags: 0
     m_Flags: 0
 --- !u!4 &869543004

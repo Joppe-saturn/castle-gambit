@@ -584,7 +584,15 @@ MonoBehaviour:
     m_Id: ea8b648d-b88a-458c-8ecd-229248e95287
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: f658c7e7-69c7-4b0b-9855-7192d0a13d0d
+      m_Path: <Touchscreen>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Toutch Pos
+      m_Flags: 0
     m_Flags: 0
   _mousePos:
     m_Name: Mouse Pos
@@ -610,7 +618,15 @@ MonoBehaviour:
     m_Id: afddfd9d-2695-431e-ad7f-801de16da35b
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2ca4f6b1-8a91-4788-9710-8d3828e735d9
+      m_Path: <Pointer>/press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Toutch Primary
+      m_Flags: 0
     m_Flags: 0
   _click:
     m_Name: Click
@@ -2315,18 +2331,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1564363810}
     m_Modifications:
-    - target: {fileID: 1214663854685035244, guid: 0bbd22ae7a1b1a14781bf75d921c0672, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1214663854685035244, guid: 0bbd22ae7a1b1a14781bf75d921c0672, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1214663854685035244, guid: 0bbd22ae7a1b1a14781bf75d921c0672, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1214663854685035244, guid: 0bbd22ae7a1b1a14781bf75d921c0672, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4176,18 +4180,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1564363810}
     m_Modifications:
-    - target: {fileID: 3030823606871504299, guid: 4b5e52539e1e48c4e9a5890f3d1d4320, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3030823606871504299, guid: 4b5e52539e1e48c4e9a5890f3d1d4320, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3030823606871504299, guid: 4b5e52539e1e48c4e9a5890f3d1d4320, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3030823606871504299, guid: 4b5e52539e1e48c4e9a5890f3d1d4320, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
