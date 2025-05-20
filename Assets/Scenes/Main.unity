@@ -561,7 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - Name: bishop
-    gameObject: {fileID: 7440481928947793609, guid: 9225fec5bfe88f54eaac65a268fba6ad, type: 3}
+    gameObject: {fileID: 2923813340908897244, guid: 0dbed0d310e471c4b90070fa41be8372, type: 3}
     PrelookMesh: {fileID: -7929665542823436400, guid: 345fa426c64ab284d991fed2ad87a25c, type: 3}
     Price: 0
 --- !u!114 &160329934

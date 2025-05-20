@@ -8,58 +8,66 @@ public class ShopManager : MonoBehaviour
 
     private DataManager _dataManager;
 
+    private DataManager.ShopState _currentState;
+
     private void Start()
     {
         _dataManager = DataManager.GetInstance();
         _dataManager.State = DataManager.ShopState.Closed;
+        _currentState = DataManager.ShopState.Closed;
+    }
+
+    private void Update()
+    {
+        if (_currentState != _dataManager.State)
+        {
+            _currentState = _dataManager.State;
+            switch (_dataManager.State)
+            {
+                case DataManager.ShopState.Closed:
+                    CloseShop();
+                    break;
+                case DataManager.ShopState.Open:
+                    OpenShop();
+                    break;
+                case DataManager.ShopState.Placing:
+                    PlaceShop();
+                    break;
+            }
+        }
     }
 
     public void OpenShop()
     {
-        switch (_dataManager.State)
-        {
-            case DataManager.ShopState.Closed:
-                ActivateArray(shopOpenObjects);
-                DisableArray(shopCloseObjects);
-                break;
-            case DataManager.ShopState.Placing:
-                ActivateArray(shopOpenObjects);
-                DisableArray(shopPlaceObjects);
-                break;
-        }
+        ActivateArray(shopOpenObjects);
+
+        DisableArray(shopPlaceObjects);
+        DisableArray(shopCloseObjects);
+
         _dataManager.State = DataManager.ShopState.Open;
+        _currentState = _dataManager.State;
     }
 
     public void CloseShop()
     {
-        switch (_dataManager.State)
-        {
-            case DataManager.ShopState.Open:
-                ActivateArray(shopCloseObjects);
-                DisableArray(shopOpenObjects);
-                break;
-            case DataManager.ShopState.Placing:
-                ActivateArray(shopCloseObjects);
-                DisableArray(shopPlaceObjects);
-                break;
-        }
+        ActivateArray(shopCloseObjects);
+
+        DisableArray(shopOpenObjects);
+        DisableArray(shopPlaceObjects);
+
         _dataManager.State = DataManager.ShopState.Closed;
+        _currentState = _dataManager.State;
     }
 
     public void PlaceShop()
     {
-        switch (_dataManager.State)
-        {
-            case DataManager.ShopState.Closed:
-                ActivateArray(shopPlaceObjects);
-                DisableArray(shopCloseObjects);
-                break;
-            case DataManager.ShopState.Open:
-                ActivateArray(shopPlaceObjects);
-                DisableArray(shopOpenObjects);
-                break;
-        }
+        ActivateArray(shopPlaceObjects);
+
+        DisableArray(shopCloseObjects);
+        DisableArray(shopOpenObjects);
+
         _dataManager.State = DataManager.ShopState.Placing;
+        _currentState = _dataManager.State;
     }
 
     private void ActivateArray(GameObject[] objects)

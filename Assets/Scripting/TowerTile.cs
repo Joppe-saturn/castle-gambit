@@ -22,6 +22,7 @@ public class TowerTile : MonoBehaviour, IClickable
                     placedTower = _dataManager.CurrentTower;
                     placedTower.gameObject = Instantiate(_dataManager.CurrentTower.gameObject, transform.position, Quaternion.identity);
                     _dataManager.CurrentTower = null;
+                    _dataManager.State = DataManager.ShopState.Closed;
                 }
             }
         }
