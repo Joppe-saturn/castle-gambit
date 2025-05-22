@@ -55,5 +55,10 @@ public class CheckerMovement : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, _tileToMoveTo.transform.position , speed);
         transform.position = new Vector3(transform.position.x, _yAxis, transform.position.z); // Zorgt ervoor dat hij op de juiste Y axis bijft.
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("yess");
+    }
 }
 

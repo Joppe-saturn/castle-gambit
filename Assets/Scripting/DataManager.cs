@@ -30,6 +30,7 @@ public class DataManager : MonoBehaviour
         Closed,
         Placing
     }
+
     private ShopState _shopState;
     public ShopState State
     {
