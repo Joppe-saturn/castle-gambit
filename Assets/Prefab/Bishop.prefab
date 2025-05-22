@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4849760721675892465}
   m_Layer: 0
   m_Name: Bishop
-  m_TagString: Untagged
+  m_TagString: ChessPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,12 +109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4ad8f25b0e823458a8e5d21a283cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackObjects: {fileID: 6399670995409857385, guid: 451a75cf7061fe741bfe8613ec7e550c, type: 3}
-  attackTime: 1
-  attackSpeed: 0.5
-  attackDistace: 2.75
-  attackHoldTime: 0.5
-  attackOffset: {x: 0, y: 0.5, z: 0}
+  closeToRook: 0
+  _attackObjects: {fileID: 0}
+  _attackTime: 0
+  _attackSpeed: 0
+  _attackDistace: 0
+  _attackHoldTime: 0
+  _attackOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &7648131127112291795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4369161517573149033, guid: 9225fec5bfe88f54eaac65a268fba6ad, type: 3}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 320551293519128394}
   - component: {fileID: 2670103500763389739}
   - component: {fileID: 2772789395424414577}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CheckerSingleWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38e7696aa5e0a04baf9a78d89826983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  _speed: 0.15
+  _health: 1
 --- !u!65 &2772789395424414577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79,6 +80,10 @@ PrefabInstance:
     - target: {fileID: 4184710798151326752, guid: d2ae9c60fba9c424b90d14d95d014911, type: 3}
       propertyPath: m_Name
       value: Checkers_Single_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184710798151326752, guid: d2ae9c60fba9c424b90d14d95d014911, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6975821067235405697, guid: d2ae9c60fba9c424b90d14d95d014911, type: 3}
       propertyPath: m_LocalPosition.x

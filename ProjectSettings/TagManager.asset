@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EndTile
   - PathTile
+  - ChessPiece
   layers:
   - Default
   - TransparentFX

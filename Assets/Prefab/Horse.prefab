@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9058900797951577270}
   m_Layer: 0
   m_Name: Horse
-  m_TagString: Untagged
+  m_TagString: ChessPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a454b41548f1a041a5287520ef40fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeToRook: 0
   horseBullet: {fileID: 5273453566522426985, guid: 5454ac4808ea0a842be3f4ad74a828d9, type: 3}
   distance: 2
   speed: 0.5

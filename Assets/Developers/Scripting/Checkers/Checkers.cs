@@ -7,7 +7,10 @@ using UnityEngine;
 public class CheckerMovement : MonoBehaviour
 {
     [Header("Movement settings")]
-    [SerializeField] private float speed;
+    [SerializeField] private float _speed;
+    [Header("Health settings")]
+    [SerializeField] private int _health;
+
     private DataManager _dataManager;
     private List<Transform> _transformList = new();
     private Transform _tileToMoveTo;
@@ -52,13 +55,21 @@ public class CheckerMovement : MonoBehaviour
 
     private void Movement()
     {
-        transform.position = Vector3.Lerp(transform.position, _tileToMoveTo.transform.position , speed);
+        transform.position = Vector3.Lerp(transform.position, _tileToMoveTo.transform.position , _speed);
         transform.position = new Vector3(transform.position.x, _yAxis, transform.position.z); // Zorgt ervoor dat hij op de juiste Y axis bijft.
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("yess");
+        if (other.CompareTag("ChessPiece"))
+        {
+            _health--;
+        }
+
+        if(_health >= 0) 
+        { 
+            Destroy(gameObject);        
+        }
     }
 }
 

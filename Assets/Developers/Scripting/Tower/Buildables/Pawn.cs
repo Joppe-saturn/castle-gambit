@@ -3,14 +3,13 @@ using UnityEngine;
 
 public class Pawn : ChessPiecesBase
 {
-    [SerializeField] private GameObject _tileToAttack;
+    private GameObject _tileToAttack;
     private DataManager _dataManager;
     private Vector3 _startPos;
     private bool _attack;
     private float _actualAttackSpeed;
 
     [Header("Attack settings")]
-    [SerializeField] Vector3 _offSet;
     [SerializeField] private Collider[] _colliders;
     [SerializeField] private float _attackSpeed;
     [SerializeField] private float _rookModifier;
@@ -59,15 +58,18 @@ public class Pawn : ChessPiecesBase
 
     private void Attack()
     {
-        if (_attack == true)
+        if (_tileToAttack != null)
         {
-            transform.position = Vector3.Lerp(transform.position, _tileToAttack.transform.position - _offSet, 0.1f); // Beweegt hem rustig naar voren.
-            transform.position = new Vector3(transform.position.x, _startPos.y, transform.position.z); // Houd de y-axis stabiel.
-        }
-        else
-        {
-            transform.position = Vector3.Lerp(transform.position, _startPos, 0.1f); // Beweegt hem rustig naar achter.
-            transform.position = new Vector3(transform.position.x, _startPos.y, transform.position.z); // Houd de y-axis stabiel.
+            if (_attack == true)
+            {
+                transform.position = Vector3.Lerp(transform.position, _tileToAttack.transform.position, 0.1f); // Beweegt hem rustig naar voren.
+                transform.position = new Vector3(transform.position.x, _startPos.y, transform.position.z); // Houd de y-axis stabiel.
+            }
+            else
+            {
+                transform.position = Vector3.Lerp(transform.position, _startPos, 0.1f); // Beweegt hem rustig naar achter.
+                transform.position = new Vector3(transform.position.x, _startPos.y, transform.position.z); // Houd de y-axis stabiel.
+            }
         }
     }
 
