@@ -3,7 +3,7 @@ using UnityEngine;
 public class TowerTile : MonoBehaviour, IClickable
 {
     private DataManager _dataManager;
-    private TowerPlacer.Tower placedTower;
+    private GameObject placedTower;
 
     private void Start()
     {
@@ -19,13 +19,16 @@ public class TowerTile : MonoBehaviour, IClickable
                 if (_dataManager.CurrentTower.Price <= _dataManager.Money)
                 {
                     _dataManager.Money -= _dataManager.CurrentTower.Price;
-                    placedTower = _dataManager.CurrentTower;
                     GameObject currentPiece = new();
                     if (_dataManager.IsPlacingWhite)
                     {
-                        currentPiece = _dataManager.CurrentTower.whiteObjetc;
+                        currentPiece = _dataManager.CurrentTower.whiteObject;
+                    } 
+                    else
+                    {
+                        currentPiece = _dataManager.CurrentTower.blackObject;
                     }
-                    placedTower.whiteObjetc = Instantiate(currentPiece, transform.position, Quaternion.identity);
+                    placedTower = Instantiate(currentPiece, transform.position, Quaternion.identity);
                     _dataManager.CurrentTower = null; 
                     _dataManager.State = DataManager.ShopState.Closed;
                 }

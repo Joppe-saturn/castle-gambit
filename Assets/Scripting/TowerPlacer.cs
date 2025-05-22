@@ -6,8 +6,8 @@ public class TowerPlacer : MonoBehaviour
     public class Tower
     {
         public string Name;
-        public GameObject whiteObjetc;
-        public GameObject blackObjetc;
+        public GameObject whiteObject;
+        public GameObject blackObject;
         public Mesh PrelookMesh;
         public int Price;
     }
@@ -20,10 +20,16 @@ public class TowerPlacer : MonoBehaviour
     private void Start()
     {
         _dataManager = DataManager.GetInstance();
+        _dataManager.IsPlacingWhite = true;
     }
 
     public void LoadTower(int tower)
     {
         _dataManager.CurrentTower = towers[tower];
+    }
+
+    public void ChangeColor(bool color)
+    {
+        _dataManager.IsPlacingWhite = color;
     }
 }
