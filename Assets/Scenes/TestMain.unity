@@ -470,6 +470,8 @@ MonoBehaviour:
     - {fileID: 1882969310}
     - {fileID: 1308696053}
     - {fileID: 1538877402}
+  Rooks:
+  - {fileID: 0}
 --- !u!4 &160329930
 Transform:
   m_ObjectHideFlags: 0
@@ -545,11 +547,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - Name: Bishop
-    gameObject: {fileID: 2923813340908897244, guid: 0dbed0d310e471c4b90070fa41be8372, type: 3}
+    whiteObject: {fileID: 0}
+    blackObject: {fileID: 0}
     PrelookMesh: {fileID: -7929665542823436400, guid: 345fa426c64ab284d991fed2ad87a25c, type: 3}
     Price: 0
   - Name: Pawn
-    gameObject: {fileID: 7051097508806863246, guid: 379767a5b6c74a8409df7ada2b39ac58, type: 3}
+    whiteObject: {fileID: 0}
+    blackObject: {fileID: 0}
     PrelookMesh: {fileID: 1705324974331375986, guid: 47d9873b9ec958d4db2e1a2fdd2f1b0b, type: 3}
     Price: 0
 --- !u!114 &160329934
@@ -5227,11 +5231,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1874986452}
-  - component: {fileID: 1874986451}
   - component: {fileID: 1874986450}
   - component: {fileID: 1874986449}
   - component: {fileID: 1874986448}
   - component: {fileID: 1874986453}
+  - component: {fileID: 1874986454}
   m_Layer: 7
   m_Name: Pawn
   m_TagString: Untagged
@@ -5308,23 +5312,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1, y: 2, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1874986451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874986447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eca41bf4837dc34f982b2361e35dd9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tileToAttack: {fileID: 0}
-  _offSet: {x: 0.5, y: 0, z: -0.5}
-  _colliders:
-  - {fileID: 1874986450}
-  - {fileID: 1874986449}
 --- !u!4 &1874986452
 Transform:
   m_ObjectHideFlags: 0
@@ -5360,8 +5347,28 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7, y: 0.7, z: 1}
+  m_Size: {x: 0.7, y: 0.7, z: 0.7}
   m_Center: {x: 0, y: 0, z: 0.5}
+--- !u!114 &1874986454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874986447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38595fbd2a0a4ea479faffff22813eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeToRook: 0
+  _tileToAttack: {fileID: 0}
+  _offSet: {x: 0.5, y: 0, z: -0.5}
+  _colliders:
+  - {fileID: 1874986450}
+  - {fileID: 1874986449}
+  _attackSpeed: 1.5
+  _rookModifier: 0.7
 --- !u!4 &1882969310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3450429069066854862, guid: f7f12a8e82ea8fc4f962766411bf6b6c, type: 3}

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DataManager : MonoBehaviour
@@ -82,4 +83,7 @@ public class DataManager : MonoBehaviour
             _isPlacingWhite = value;
         }
     }
+
+    public List<GameObject> Rooks = new List<GameObject>();
+
 }
