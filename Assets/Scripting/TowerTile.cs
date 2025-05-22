@@ -20,7 +20,12 @@ public class TowerTile : MonoBehaviour, IClickable
                 {
                     _dataManager.Money -= _dataManager.CurrentTower.Price;
                     placedTower = _dataManager.CurrentTower;
-                    placedTower.gameObject = Instantiate(_dataManager.CurrentTower.gameObject, transform.position, Quaternion.identity);
+                    GameObject currentPiece = new();
+                    if (_dataManager.IsPlacingWhite)
+                    {
+                        currentPiece = _dataManager.CurrentTower.whiteObjetc;
+                    }
+                    placedTower.whiteObjetc = Instantiate(currentPiece, transform.position, Quaternion.identity);
                     _dataManager.CurrentTower = null; 
                     _dataManager.State = DataManager.ShopState.Closed;
                 }

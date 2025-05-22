@@ -6,7 +6,8 @@ public class TowerPlacer : MonoBehaviour
     public class Tower
     {
         public string Name;
-        public GameObject gameObject;
+        public GameObject whiteObjetc;
+        public GameObject blackObjetc;
         public Mesh PrelookMesh;
         public int Price;
     }

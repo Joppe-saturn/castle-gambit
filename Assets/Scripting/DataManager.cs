@@ -69,4 +69,17 @@ public class DataManager : MonoBehaviour
             _currentTower = value;
         }
     }
+
+    private bool _isPlacingWhite;
+    public bool IsPlacingWhite
+    {
+        get
+        {
+            return _isPlacingWhite;
+        }
+        set
+        {
+            _isPlacingWhite = value;
+        }
+    }
 }
