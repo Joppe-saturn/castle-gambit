@@ -942,8 +942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - Name: Bishop
-    gameObject: {fileID: 2923813340908897244, guid: 0dbed0d310e471c4b90070fa41be8372, type: 3}
+  - Name: Horse
+    gameObject: {fileID: 261257295242952542, guid: 020aba4fd921ad3459a657492184e20c, type: 3}
     PrelookMesh: {fileID: -7929665542823436400, guid: 345fa426c64ab284d991fed2ad87a25c, type: 3}
     Price: 0
 --- !u!114 &755443063
@@ -2182,6 +2182,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 755443062}
+    - target: {fileID: 7012439285369751845, guid: ae22ced31c08e3f4eb1f088be565c0fd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7902668699792778816, guid: ae22ced31c08e3f4eb1f088be565c0fd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
