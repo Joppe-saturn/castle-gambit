@@ -2,11 +2,11 @@ using UnityEngine;
 using System.Collections;
 
 
-public class Knight : MonoBehaviour
+public class Knight : ChessPiecesBase
 {
     [SerializeField] private GameObject horseBullet;
     private GameObject horseBulletInstance;
-
+    private DataManager _dataManager;
     [SerializeField] private float distance;
     [SerializeField] private float speed;
     [SerializeField] private float orbitSpeed;
@@ -15,10 +15,28 @@ public class Knight : MonoBehaviour
 
     private void Start()
     {
+        _dataManager = DataManager.GetInstance();
         horseBulletInstance = Instantiate(horseBullet, transform.position, Quaternion.identity);
-
         StartCoroutine(SummonBullet());
         StartCoroutine(AttackCycle());
+    }
+
+    private void Update()
+    {
+        CheckForRook(_dataManager);
+        RookModifiers();
+    }
+
+    private void RookModifiers()
+    {
+        if (closeToRook == true)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 
     private IEnumerator AttackCycle()

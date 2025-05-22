@@ -4,7 +4,7 @@ using UnityEngine;
 public class Pawn : ChessPiecesBase
 {
     [SerializeField] private GameObject _tileToAttack;
-    private DataManager _instance;
+    private DataManager _dataManager;
     private Vector3 _startPos;
     private bool _attack;
     private float _actualAttackSpeed;
@@ -17,14 +17,14 @@ public class Pawn : ChessPiecesBase
 
     private void Start()
     {
-        _instance = DataManager.GetInstance();
+        _dataManager = DataManager.GetInstance();
         _startPos = transform.position;
         StartCoroutine(StartAttack());
     }
 
     private void Update()
     {
-        CheckForRook(_instance);
+        CheckForRook(_dataManager);
         RookModifiers();
     }
 

@@ -1,66 +1,85 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Bishop : MonoBehaviour
+public class Bishop : ChessPiecesBase
 {
-    [SerializeField] private GameObject attackObjects;
-    private List<GameObject> attackList = new();
-
-    [SerializeField] private float attackTime;
-    [SerializeField] private float attackSpeed;
-    [SerializeField] private float attackDistace;
-    [SerializeField] private float attackHoldTime;
-    [SerializeField] private Vector3 attackOffset;
+    [SerializeField] private GameObject _attackObjects;
+    private List<GameObject> _attackList = new();
+    private DataManager _dataManager;
+    [SerializeField] private float _attackTime;
+    [SerializeField] private float _attackSpeed;
+    [SerializeField] private float _attackDistace;
+    [SerializeField] private float _attackHoldTime;
+    [SerializeField] private Vector3 _attackOffset;
 
     private void Start()
     {
+        _dataManager = DataManager.GetInstance();
         for (int i = 0; i < 4; i++)
         {
-            attackList.Add(Instantiate(attackObjects, transform.position, Quaternion.identity));
-            attackList[i].transform.Rotate(0, 90 * i + 45, 0);
-            attackList[i].SetActive(false);
+            _attackList.Add(Instantiate(_attackObjects, transform.position, Quaternion.identity));
+            _attackList[i].transform.Rotate(0, 90 * i + 45, 0);
+            _attackList[i].SetActive(false);
         }
 
         StartCoroutine(AttackCycle());
+    }
+
+    private void Update()
+    {
+        CheckForRook(_dataManager);
+        RookModifiers();
+    }
+
+    private void RookModifiers()
+    {
+        if (closeToRook == true)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 
     private IEnumerator AttackCycle()
     {
         while (true)
         {
-            yield return new WaitForSeconds(attackTime);
+            yield return new WaitForSeconds(_attackTime);
 
-            for (int i = 0; i < attackList.Count; i++)
+            for (int i = 0; i < _attackList.Count; i++)
             {
-                attackList[i].SetActive(true);
-                attackList[i].transform.position = transform.position + attackOffset;
+                _attackList[i].SetActive(true);
+                _attackList[i].transform.position = transform.position + _attackOffset;
             }
 
 
-            for (float i = 0; i < attackSpeed; i += 0.02f)
+            for (float i = 0; i < _attackSpeed; i += 0.02f)
             {
-                for (int j = 0; j < attackList.Count; j++)
+                for (int j = 0; j < _attackList.Count; j++)
                 {
-                    attackList[j].transform.position += attackList[j].transform.forward * attackDistace / attackSpeed * 0.01f;
+                    _attackList[j].transform.position += _attackList[j].transform.forward * _attackDistace / _attackSpeed * 0.01f;
                 }
                 yield return new WaitForSeconds(0.02f);
             }
 
-            yield return new WaitForSeconds(attackHoldTime);
+            yield return new WaitForSeconds(_attackHoldTime);
 
-            for (float i = 0; i < attackSpeed; i += 0.02f)
+            for (float i = 0; i < _attackSpeed; i += 0.02f)
             {
-                for (int j = 0; j < attackList.Count; j++)
+                for (int j = 0; j < _attackList.Count; j++)
                 {
-                    attackList[j].transform.position -= attackList[j].transform.forward * attackDistace / attackSpeed * 0.01f;
+                    _attackList[j].transform.position -= _attackList[j].transform.forward * _attackDistace / _attackSpeed * 0.01f;
                 }
                 yield return new WaitForSeconds(0.02f);
             }
 
-            for (int i = 0; i < attackList.Count; i++)
+            for (int i = 0; i < _attackList.Count; i++)
             {
-                attackList[i].SetActive(false);
+                _attackList[i].SetActive(false);
             }
         }
     }
