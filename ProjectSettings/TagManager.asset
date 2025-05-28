@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EndTile
   - PathTile
+  - SlimeBullet
   - ChessPiece
   layers:
   - Default

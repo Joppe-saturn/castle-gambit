@@ -10,6 +10,9 @@ public class CheckerMovement : MonoBehaviour
     [SerializeField] private float _speed;
     [Header("Health settings")]
     [SerializeField] private int _health;
+    [SerializeField] private MeshRenderer _meshRenderer;
+    [SerializeField] private Material _slimeMaterial;
+    private Material _material;
 
     private DataManager _dataManager;
     private List<Transform> _transformList = new();
@@ -19,6 +22,7 @@ public class CheckerMovement : MonoBehaviour
 
     private void Start()
     {
+        _material = _meshRenderer.material;
         _dataManager = DataManager.GetInstance();
         _transformList = _dataManager.Paths(0).ToList();
         _yAxis = transform.position.y;
@@ -65,11 +69,22 @@ public class CheckerMovement : MonoBehaviour
         {
             _health--;
         }
-
-        if(_health >= 0) 
-        { 
-            Destroy(gameObject);        
+        else if (other.CompareTag("SlimeBullet"))
+        {
+            StartCoroutine(Slimed());
         }
+
+        if (_health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator Slimed()
+    {
+        _meshRenderer.material = _slimeMaterial;
+        yield return new WaitForSeconds(1);
+        _meshRenderer.material = _material;
     }
 }
 

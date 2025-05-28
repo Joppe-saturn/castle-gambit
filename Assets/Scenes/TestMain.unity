@@ -990,7 +990,7 @@ MonoBehaviour:
     Price: 0
   - Name: Rook
     whiteObject: {fileID: 3808664457888984256, guid: b6db930b95677eb43a9647b0a8067460, type: 3}
-    blackObject: {fileID: 6690902422450271726, guid: 3508feab56e69dd4c996035b7b6dfa5d, type: 3}
+    blackObject: {fileID: 7360352285416033559, guid: 9af961537136f584a8c86793aeb10167, type: 3}
     PrelookMesh: {fileID: -2806363557253865630, guid: 46e0bc6e7d557644983be4d76551cc63, type: 3}
     Price: 0
   - Name: Queen

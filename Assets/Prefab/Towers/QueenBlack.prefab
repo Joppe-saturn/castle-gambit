@@ -62,8 +62,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5744254813386437910}
   m_Layer: 7
-  m_Name: Queen black
-  m_TagString: Untagged
+  m_Name: QueenBlack
+  m_TagString: ChessPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

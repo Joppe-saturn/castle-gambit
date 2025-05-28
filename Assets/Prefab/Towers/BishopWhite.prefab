@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4849760721675892465}
   m_Layer: 0
-  m_Name: Bishop
+  m_Name: BishopWhite
   m_TagString: ChessPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,11 +110,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeToRook: 0
-  _attackObjects: {fileID: 0}
-  _attackTime: 0
-  _attackSpeed: 0
-  _attackDistace: 0
-  _attackHoldTime: 0
+  _attackObjects: {fileID: 5380134815324374219, guid: a1ceb7c2b52f08c4da95ca9a36d9d545, type: 3}
+  _attackTime: 1.5
+  _attackSpeed: 0.8
+  _attackDistace: 2.75
+  _attackHoldTime: 0.1
   _attackOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &7648131127112291795 stripped
 Transform:
