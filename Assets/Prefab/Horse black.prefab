@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4127199759692207822}
-  m_Layer: 6
-  m_Name: Horse
+  m_Layer: 7
+  m_Name: Horse black
   m_TagString: ChessPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,8 +46,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 915409148158527594, guid: b29d49ef95edd5d43959fcba9b0181eb, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3520955023874235220, guid: b29d49ef95edd5d43959fcba9b0181eb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbfac4682b3b47541a6106b119e4c663, type: 2}
     - target: {fileID: 6933158273560736357, guid: b29d49ef95edd5d43959fcba9b0181eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
@@ -114,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeToRook: 0
-  horseBullet: {fileID: 5273453566522426985, guid: 5454ac4808ea0a842be3f4ad74a828d9, type: 3}
+  horseBullet: {fileID: 5273453566522426985, guid: 0838cd6ac4dfdc740a2b7ed112054283, type: 3}
   distance: 1.25
   speed: 1.2
   orbitSpeed: 2

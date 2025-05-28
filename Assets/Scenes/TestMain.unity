@@ -594,8 +594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - Name: Bishop
-    whiteObject: {fileID: 0}
-    blackObject: {fileID: 0}
+    whiteObject: {fileID: 2923813340908897244, guid: 0dbed0d310e471c4b90070fa41be8372, type: 3}
+    blackObject: {fileID: 5340689306374656144, guid: 5b0a7612a1df8e24fb6ae1c0c620f260, type: 3}
     PrelookMesh: {fileID: -7929665542823436400, guid: 345fa426c64ab284d991fed2ad87a25c, type: 3}
     Price: 0
   - Name: Pawn
@@ -612,6 +612,11 @@ MonoBehaviour:
     whiteObject: {fileID: 6858464630054899985, guid: 0545bca5bb52a9546940d1391131cb00, type: 3}
     blackObject: {fileID: 6858464630054899985, guid: c298a77617938dc4b97d01c3d9fdd904, type: 3}
     PrelookMesh: {fileID: 4385538395738152230, guid: daec4722ae837d244b6bd7a9604d9e0a, type: 3}
+    Price: 0
+  - Name: Knight
+    whiteObject: {fileID: 261257295242952542, guid: 020aba4fd921ad3459a657492184e20c, type: 3}
+    blackObject: {fileID: 261257295242952542, guid: 23632da9e10cc2f4ab41b25b5f782adc, type: 3}
+    PrelookMesh: {fileID: -8319465574948283117, guid: 74b3acb6207c9d84e893c60a99840144, type: 3}
     Price: 0
 --- !u!114 &160329934
 MonoBehaviour:
@@ -6157,6 +6162,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 160329933}
+    - target: {fileID: 7612400707667575900, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7725799695083588852, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 545992270458453372}
   - component: {fileID: 1935933326286890861}
   - component: {fileID: 8622538285510514806}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: HorseBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,8 +117,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1286086732390607391}
-  m_Layer: 6
-  m_Name: HorseBullet
+  m_Layer: 7
+  m_Name: HorseBullet black
   m_TagString: ChessPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
