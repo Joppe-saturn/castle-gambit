@@ -5582,6 +5582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 356376897436939123, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2218043526355850132, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
       propertyPath: '_pathArray.Array.data[0]._path.Array.data[0]'
       value: 
@@ -5714,6 +5718,10 @@ PrefabInstance:
       propertyPath: _mainCamera
       value: 
       objectReference: {fileID: 2062124414}
+    - target: {fileID: 8853886496242940199, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8853886496242940199, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
       propertyPath: 'shopOpenObjects.Array.data[0]'
       value: 
@@ -6020,6 +6028,10 @@ PrefabInstance:
     - target: {fileID: 3072011333325987226, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072011333325987226, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4587405659698856108, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
