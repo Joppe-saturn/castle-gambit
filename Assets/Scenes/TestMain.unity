@@ -995,8 +995,8 @@ MonoBehaviour:
     Price: 0
   - Name: Queen
     whiteObject: {fileID: 6858464630054899985, guid: 0545bca5bb52a9546940d1391131cb00, type: 3}
-    blackObject: {fileID: 6690902422450271726, guid: 3508feab56e69dd4c996035b7b6dfa5d, type: 3}
-    PrelookMesh: {fileID: -2806363557253865630, guid: 46e0bc6e7d557644983be4d76551cc63, type: 3}
+    blackObject: {fileID: 6858464630054899985, guid: c298a77617938dc4b97d01c3d9fdd904, type: 3}
+    PrelookMesh: {fileID: 4385538395738152230, guid: daec4722ae837d244b6bd7a9604d9e0a, type: 3}
     Price: 0
 --- !u!114 &160329934
 MonoBehaviour:

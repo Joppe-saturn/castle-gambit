@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300223222490024373}
   - component: {fileID: 226157695338882234}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Queen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closeToRook: 0
   rotationSpeed: 86
-  bullet: {fileID: 6399670995409857385, guid: 43ed0a082ef82bd4990fef33b56b2738, type: 3}
+  bullet: {fileID: 6399670995409857385, guid: 60af5b4ef38345348832a107314de0c5, type: 3}
   shootTime: 0.1
   waitTime: 1
   amountOfBullets: 5
@@ -61,8 +61,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5744254813386437910}
-  m_Layer: 6
-  m_Name: Queen
+  m_Layer: 7
+  m_Name: Queen black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,8 +98,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4367892572590946785, guid: d605599ba607d05449325d72d7aea197, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7278829044574232636, guid: d605599ba607d05449325d72d7aea197, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b0e6dce76f9720c429490f1b3e599bdf, type: 2}
     - target: {fileID: 8240186936589525239, guid: d605599ba607d05449325d72d7aea197, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

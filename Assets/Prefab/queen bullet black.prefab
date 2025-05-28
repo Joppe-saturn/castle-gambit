@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5164784205244938928}
   - component: {fileID: 3120927135940217496}
   - component: {fileID: 5617223406825326045}
-  m_Layer: 6
-  m_Name: queen bullet
+  m_Layer: 7
+  m_Name: queen bullet black
   m_TagString: ChessPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
