@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5896998303703285790}
   m_Layer: 6
   m_Name: HorseBullet
-  m_TagString: Untagged
+  m_TagString: ChessPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.01, y: 0.01, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5896998303703285790
 Rigidbody:

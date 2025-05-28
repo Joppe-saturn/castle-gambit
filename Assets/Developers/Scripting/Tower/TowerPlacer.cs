@@ -14,7 +14,7 @@ public class TowerPlacer : MonoBehaviour
 
     [SerializeField] private Tower[] towers;
 
-    private DataManager _dataManager;
+    [SerializeField] private DataManager _dataManager;
 
 
     private void Start()
@@ -23,9 +23,22 @@ public class TowerPlacer : MonoBehaviour
         _dataManager.IsPlacingWhite = true;
     }
 
+    private void Update()
+    {
+        if (_dataManager.CurrentTower != null) 
+        { 
+        
+        Debug.Log(_dataManager.CurrentTower.Name + " hoi");
+        }
+        else
+        {
+            Debug.Log("Null");
+        }
+    }
+
     public void LoadTower(int tower)
     {
-        _dataManager.CurrentTower = towers[tower];
+        _dataManager.CurrentTower = towers[0];
     }
 
     public void ChangeColor(bool color)

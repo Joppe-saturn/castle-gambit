@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4127199759692207822}
   m_Layer: 6
-  m_Name: Horse
+  m_Name: KnightWhite
   m_TagString: ChessPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   horseBullet: {fileID: 5273453566522426985, guid: 5454ac4808ea0a842be3f4ad74a828d9, type: 3}
   distance: 1.25
   speed: 1.2
-  orbitSpeed: 2
+  orbitSpeed: 1.7
   rotationSpeed: -3.1415927
 --- !u!4 &8329007098036845436 stripped
 Transform:

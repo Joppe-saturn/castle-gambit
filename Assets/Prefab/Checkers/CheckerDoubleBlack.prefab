@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.15
-  _health: 2
+  _health: 1
   _meshRenderer: {fileID: 4229954021762857938}
   _slimeMaterial: {fileID: 2100000, guid: c75e44f4c010b854d949497083db6a8d, type: 2}
 --- !u!65 &8306800661959203045
