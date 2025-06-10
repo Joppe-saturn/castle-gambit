@@ -4223,6 +4223,10 @@ PrefabInstance:
       propertyPath: _dataManager
       value: 
       objectReference: {fileID: 1491045818}
+    - target: {fileID: 1201439472906623141, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
+      propertyPath: loadWaitTime
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2218043526355850132, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
       propertyPath: '_pathArray.Array.data[0]._path.Array.data[0]'
       value: 

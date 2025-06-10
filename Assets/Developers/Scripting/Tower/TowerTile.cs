@@ -1,9 +1,12 @@
+using System.Collections;
 using UnityEngine;
 
 public class TowerTile : MonoBehaviour, IClickable
 {
     private DataManager _dataManager;
     private GameObject placedTower;
+
+    private float loadTime = 0.02f;
 
     private void Start()
     {
@@ -12,27 +15,40 @@ public class TowerTile : MonoBehaviour, IClickable
 
     public void OnClick()
     {
-        if (_dataManager.CurrentTower != null)
+        StartCoroutine(PlaceTower());
+    }
+
+    private IEnumerator PlaceTower()
+    {
+        yield return new WaitForSeconds(loadTime);
+
+        Debug.Log(_dataManager.ClickOnButton);
+        if(!_dataManager.ClickOnButton)
         {
-            if (placedTower == null)
+            if (_dataManager.CurrentTower != null)
             {
-                if (_dataManager.CurrentTower.Price <= _dataManager.Money)
+                if (placedTower == null)
                 {
-                    _dataManager.Money -= _dataManager.CurrentTower.Price;
-                    GameObject currentPiece = new();
-                    if (_dataManager.IsPlacingWhite)
+                    if (_dataManager.CurrentTower.Price <= _dataManager.Money)
                     {
-                        currentPiece = _dataManager.CurrentTower.whiteObject;
-                    } 
-                    else
-                    {
-                        currentPiece = _dataManager.CurrentTower.blackObject;
+                        _dataManager.Money -= _dataManager.CurrentTower.Price;
+                        GameObject currentPiece = new();
+                        if (_dataManager.IsPlacingWhite)
+                        {
+                            currentPiece = _dataManager.CurrentTower.whiteObject;
+                        }
+                        else
+                        {
+                            currentPiece = _dataManager.CurrentTower.blackObject;
+                        }
+                        placedTower = Instantiate(currentPiece, transform.position, Quaternion.identity);
+                        _dataManager.CurrentTower = null;
+                        _dataManager.State = DataManager.ShopState.Closed;
                     }
-                    placedTower = Instantiate(currentPiece, transform.position, Quaternion.identity);
-                    _dataManager.CurrentTower = null; 
-                    _dataManager.State = DataManager.ShopState.Closed;
                 }
             }
         }
+
+        _dataManager.ClickOnButton = false;
     }
 }

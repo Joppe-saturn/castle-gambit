@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class TowerPlacer : MonoBehaviour
@@ -16,29 +17,25 @@ public class TowerPlacer : MonoBehaviour
 
     [SerializeField] private DataManager _dataManager;
 
-
     private void Start()
     {
         _dataManager = DataManager.GetInstance();
         _dataManager.IsPlacingWhite = true;
     }
 
-    private void Update()
+    public void LoadTower(int tower)
     {
-        if (_dataManager.CurrentTower != null) 
-        { 
-        
-        Debug.Log(_dataManager.CurrentTower.Name + " hoi");
+        _dataManager.ClickOnButton = true;
+
+        Tower currentTower = towers[tower];
+        if (_dataManager.CurrentTower != currentTower)
+        {
+            _dataManager.CurrentTower = currentTower;
         }
         else
         {
-            Debug.Log("Null");
+            _dataManager.CurrentTower = null;
         }
-    }
-
-    public void LoadTower(int tower)
-    {
-        _dataManager.CurrentTower = towers[0];
     }
 
     public void ChangeColor(bool color)
