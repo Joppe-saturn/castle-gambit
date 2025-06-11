@@ -22,6 +22,7 @@ public class ShopMover : MonoBehaviour
     public void ChangeShopPos()
     {
         isOpen = !isOpen;
+        shopBox.SetActive(isOpen);
 
         StartCoroutine(LerpShop());
     }
