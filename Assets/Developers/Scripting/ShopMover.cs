@@ -6,6 +6,7 @@ public class ShopMover : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Vector3 openPos;
     [SerializeField] private Vector3 closePos;
+    [SerializeField] private GameObject shopBox;
 
     public bool isOpen = true;
 
@@ -20,6 +21,7 @@ public class ShopMover : MonoBehaviour
     public void ChangeShopPos()
     {
         isOpen = !isOpen;
+        shopBox.SetActive(isOpen);
 
         StartCoroutine(LerpShop());
     }
