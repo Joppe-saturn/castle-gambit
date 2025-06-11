@@ -25,6 +25,7 @@ public class ShopMover : MonoBehaviour
 
     private IEnumerator LerpShop()
     {
+        Debug.Log(rectTransform.localPosition);
         if (isOpen)
         {
             while (rectTransform.localPosition != openPos && isOpen)
