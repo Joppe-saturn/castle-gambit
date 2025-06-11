@@ -14,6 +14,7 @@ public class ShopMover : MonoBehaviour
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
+        openPos = rectTransform.localPosition;
     }
 
     public void ChangeShopPos()
@@ -25,7 +26,6 @@ public class ShopMover : MonoBehaviour
 
     private IEnumerator LerpShop()
     {
-        Debug.Log(rectTransform.localPosition);
         if (isOpen)
         {
             while (rectTransform.localPosition != openPos && isOpen)
