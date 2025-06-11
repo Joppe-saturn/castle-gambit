@@ -25,8 +25,6 @@ public class TowerPlacer : MonoBehaviour
 
     public void LoadTower(int tower)
     {
-        _dataManager.ClickOnButton = true;
-
         Tower currentTower = towers[tower];
         if (_dataManager.CurrentTower != currentTower)
         {

@@ -85,17 +85,4 @@ public class DataManager : MonoBehaviour
     }
 
     public List<GameObject> Rooks = new List<GameObject>();
-
-    private bool _clickOnButton;
-    public bool ClickOnButton
-    {
-        get
-        {
-            return _clickOnButton;
-        }
-        set
-        {
-            _clickOnButton = value;
-        }
-    }
 }
