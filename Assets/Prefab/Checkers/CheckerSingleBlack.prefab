@@ -135,7 +135,7 @@ MonoBehaviour:
   _speed: 0.15
   _health: 1
   _meshRenderer: {fileID: 5031541309613070667}
-  _slimeMaterial: {fileID: 2100000, guid: c75e44f4c010b854d949497083db6a8d, type: 2}
+  _slimeMaterial: {fileID: 2100000, guid: c56e9375efef3ae4fbeafcf2ecffd756, type: 2}
 --- !u!65 &5901869962648378922
 BoxCollider:
   m_ObjectHideFlags: 0
