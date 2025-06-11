@@ -6,6 +6,7 @@ public class ShopMover : MonoBehaviour
     [SerializeField] private float speed;
     private Vector3 openPos;
     [SerializeField] private float closePosY;
+    [SerializeField] private GameObject shopBox;
     private Vector3 closePos;
 
     protected bool isOpen = true;
