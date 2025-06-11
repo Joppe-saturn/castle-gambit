@@ -1841,6 +1841,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 396941336981731966, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
+      propertyPath: shopBox
+      value: 
+      objectReference: {fileID: 1719513818}
+    - target: {fileID: 396941336981731966, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
       propertyPath: openPos.x
       value: 10
       objectReference: {fileID: 0}
@@ -2030,7 +2034,10 @@ PrefabInstance:
       objectReference: {fileID: 1491045817}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6546646512276726986, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1719513819}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
 --- !u!1 &638303906 stripped
@@ -5181,7 +5188,7 @@ GameObject:
   - component: {fileID: 1719513821}
   - component: {fileID: 1719513820}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: UI Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5196,11 +5203,11 @@ Transform:
   m_GameObject: {fileID: 1719513818}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.74, y: 6.2, z: -0.75}
-  m_LocalScale: {x: 1, y: 1, z: 1.5}
+  m_LocalPosition: {x: -413.53073, y: -215.38177, z: -0.5586593}
+  m_LocalScale: {x: 0.744879, y: 0.744879, z: 1.1173186}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2026314322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1719513820
 BoxCollider:
@@ -5670,6 +5677,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3450429069066854862, guid: f7f12a8e82ea8fc4f962766411bf6b6c, type: 3}
   m_PrefabInstance: {fileID: 1948513786}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2026314322 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6546646512276726986, guid: 0e96e72a687bc1e4e9d904b378de095c, type: 3}
+  m_PrefabInstance: {fileID: 638303905}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2062124411
 GameObject:
@@ -7084,6 +7096,5 @@ SceneRoots:
   - {fileID: 746321142}
   - {fileID: 496624841}
   - {fileID: 41039573}
-  - {fileID: 1719513819}
   - {fileID: 638303905}
   - {fileID: 1491045815}
