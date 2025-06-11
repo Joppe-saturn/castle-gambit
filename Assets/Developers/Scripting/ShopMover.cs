@@ -4,10 +4,11 @@ using UnityEngine;
 public class ShopMover : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private Vector3 openPos;
-    [SerializeField] private Vector3 closePos;
+    private Vector3 openPos;
+    [SerializeField] private float closePosY;
+    private Vector3 closePos;
 
-    public bool isOpen = true;
+    protected bool isOpen = true;
 
     private RectTransform rectTransform;
 
@@ -15,6 +16,7 @@ public class ShopMover : MonoBehaviour
     {
         rectTransform = GetComponent<RectTransform>();
         openPos = rectTransform.localPosition;
+        closePos = new Vector3(openPos.x, closePosY, 0);
     }
 
     public void ChangeShopPos()
