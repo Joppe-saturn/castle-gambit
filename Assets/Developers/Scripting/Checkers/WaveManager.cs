@@ -29,8 +29,10 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField] public Level level;
 
+    private DataManager _dataManager;
     private void Start()
     {
+        _dataManager = DataManager.GetInstance();
         StartCoroutine(SpawnWaves());
     }
 
@@ -39,6 +41,8 @@ public class WaveManager : MonoBehaviour
         for (int i = 0; i < level.waves.Count; i++)
         {
             yield return new WaitForSeconds(level.waves[i].waitTime);
+
+            _dataManager.Money += level.waves[i].moneyGainedFromWave;
 
             for (int j = 0; j < level.waves[i].checkers.Count; j++)
             {
