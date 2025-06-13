@@ -84,8 +84,8 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    private int _health;
-    public int Health
+    private float _health;
+    public float Health
     {
         get 
         { 
