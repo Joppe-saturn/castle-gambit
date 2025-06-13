@@ -45,6 +45,7 @@ public class CheckerMovement : MonoBehaviour
         _tileToMoveTo = _transformList[_index];
         if (_tileToMoveTo.CompareTag("EndTile"))
         {
+            _dataManager.Health--;
             Destroy(gameObject);
         }
     }
