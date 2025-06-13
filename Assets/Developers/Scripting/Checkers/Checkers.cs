@@ -13,6 +13,8 @@ public class CheckerMovement : MonoBehaviour
     [SerializeField] private MeshRenderer _meshRenderer;
     [SerializeField] private Material _slimeMaterial;
     private Material _material;
+    [Header("Money settings")]
+    [SerializeField] private int _moneyOnDeath;
 
     private DataManager _dataManager;
     private List<Transform> _transformList = new();
@@ -77,6 +79,7 @@ public class CheckerMovement : MonoBehaviour
 
         if (_health <= 0)
         {
+            _dataManager.Money += _moneyOnDeath;
             Destroy(gameObject);
         }
     }
