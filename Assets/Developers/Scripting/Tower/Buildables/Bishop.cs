@@ -12,6 +12,8 @@ public class Bishop : ChessPiecesBase
     [SerializeField] private float _attackDistace;
     [SerializeField] private float _attackHoldTime;
     [SerializeField] private Vector3 _attackOffset;
+    [SerializeField] private float _rookAttackTime;
+    private bool _isMovingForward;
 
     private void Start()
     {
@@ -29,26 +31,24 @@ public class Bishop : ChessPiecesBase
     private void Update()
     {
         CheckForRook(_dataManager);
-        RookModifiers();
-    }
-
-    private void RookModifiers()
-    {
-        if (closeToRook == true)
-        {
-
-        }
-        else
-        {
-
-        }
     }
 
     private IEnumerator AttackCycle()
     {
+
+
         while (true)
         {
-            yield return new WaitForSeconds(_attackTime);
+            float pCurrentAttackTime;
+            if (closeToRook == false)
+            {
+                pCurrentAttackTime = _attackTime; 
+            }
+            else
+            {
+                pCurrentAttackTime = _rookAttackTime;
+            }
+            yield return new WaitForSeconds(pCurrentAttackTime);
 
             for (int i = 0; i < _attackList.Count; i++)
             {

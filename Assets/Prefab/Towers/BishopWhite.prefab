@@ -116,6 +116,7 @@ MonoBehaviour:
   _attackDistace: 2.75
   _attackHoldTime: 0.1
   _attackOffset: {x: 0, y: 0, z: 0}
+  _rookAttackTime: 0.1
 --- !u!4 &7648131127112291795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4369161517573149033, guid: 9225fec5bfe88f54eaac65a268fba6ad, type: 3}
