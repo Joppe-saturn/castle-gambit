@@ -46,10 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38e7696aa5e0a04baf9a78d89826983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.15
-  _health: 1
+  _speed: 0.1
+  _health: 2
   _meshRenderer: {fileID: 3831387756042325578}
   _slimeMaterial: {fileID: 2100000, guid: b2917ece8fc9eb34db8c64d27654d3a6, type: 2}
+  _moneyOnDeath: 20
 --- !u!65 &5010780531493783329
 BoxCollider:
   m_ObjectHideFlags: 0

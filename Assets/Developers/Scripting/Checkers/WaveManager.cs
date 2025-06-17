@@ -40,9 +40,9 @@ public class WaveManager : MonoBehaviour
     {
         for (int i = 0; i < level.waves.Count; i++)
         {
-            _dataManager.Money += level.waves[i].moneyGainedFromWave;
-
             yield return new WaitForSeconds(level.waves[i].waitTime);
+
+            _dataManager.Money += level.waves[i].moneyGainedFromWave;
 
             for (int j = 0; j < level.waves[i].checkers.Count; j++)
             {

@@ -115,8 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   closeToRook: 0
   horseBullet: {fileID: 5273453566522426985, guid: 5454ac4808ea0a842be3f4ad74a828d9, type: 3}
-  distance: 1.25
-  speed: 1.2
+  distance: 1
+  speed: 0.4
   orbitSpeed: 1.7
   rotationSpeed: -3.1415927
 --- !u!4 &8329007098036845436 stripped
