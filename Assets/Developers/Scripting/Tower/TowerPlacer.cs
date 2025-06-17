@@ -30,6 +30,8 @@ public class TowerPlacer : MonoBehaviour
     
     private bool isLerping = false;
 
+    private ShopMover shopMover;
+
     private void Start()
     {
         _dataManager = DataManager.GetInstance();
@@ -37,13 +39,17 @@ public class TowerPlacer : MonoBehaviour
 
         colorButtonImage = colorButton.GetComponent<Image>();
         colorButtonText = colorButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+
+        shopMover = FindFirstObjectByType<ShopMover>();
     }
 
     public void LoadTower(int tower)
     {
         Tower currentTower = towers[tower];
-        if (_dataManager.CurrentTower != currentTower)
+        
+        if (_dataManager.Money >= currentTower.Price)
         {
+            shopMover.CloseShop();
             _dataManager.CurrentTower = currentTower;
         }
     }

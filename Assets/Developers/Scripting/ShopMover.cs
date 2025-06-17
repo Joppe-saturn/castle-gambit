@@ -7,6 +7,7 @@ public class ShopMover : MonoBehaviour
     private Vector3 openPos;
     [SerializeField] private float closePosY;
     [SerializeField] private GameObject shopBox;
+    [SerializeField] private float boxWaitTime;
     private Vector3 closePos;
     [SerializeField] private RectTransform arrow;
 
@@ -24,11 +25,18 @@ public class ShopMover : MonoBehaviour
         closePos = new Vector3(openPos.x, closePosY, 0);
     }
 
+    public void CloseShop()
+    {
+        if (isOpen)
+        {
+            ChangeShopPos();
+        }
+    }
+
     public void ChangeShopPos()
     {
         isOpen = !isOpen;
-        shopBox.SetActive(isOpen);
-
+        StartCoroutine(DissapearBox());
         if (moveShop != null && rotateArrow != null)
         {
             StopCoroutine(moveShop);
@@ -37,6 +45,12 @@ public class ShopMover : MonoBehaviour
 
         moveShop = StartCoroutine(LerpShop());
         rotateArrow = StartCoroutine(RotateArrow());
+    }
+
+    private IEnumerator DissapearBox()
+    {
+        yield return new WaitForSeconds(boxWaitTime);
+        shopBox.SetActive(isOpen);
     }
 
     private IEnumerator RotateArrow()
