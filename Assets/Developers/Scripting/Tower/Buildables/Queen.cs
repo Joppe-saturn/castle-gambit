@@ -32,7 +32,7 @@ public class Queen : ChessPiecesBase
 
     private void Update()
     {
-        CheckForRook(_dataManager);
+        CheckForRook(_dataManager, transform.position);
         RookModifiers();
     }
 
@@ -43,7 +43,7 @@ public class Queen : ChessPiecesBase
         int bulletCount = 0;
         while (true)
         {
-            transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+            transform.GetChild(0).Rotate(0, rotationSpeed * Time.deltaTime, 0);
 
             timePassed += Time.deltaTime;
 
@@ -58,7 +58,7 @@ public class Queen : ChessPiecesBase
                     if (!currentBullet.activeSelf)
                     {
                         currentBullet.SetActive(true);
-                        currentBullet.transform.SetPositionAndRotation(transform.position, transform.rotation);
+                        currentBullet.transform.SetPositionAndRotation(transform.GetChild(0).position, transform.GetChild(0).rotation);
                         break;
                     }
                 }

@@ -226,8 +226,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeToRook: 0
+  _isWhite: 0
   _colliders:
   - {fileID: 7755739931859695999}
   - {fileID: 7535276304432558829}
   _attackSpeed: 1.5
-  _rookModifier: 0.7
+  _cooldownTime: 3
+  _rookCooldownTime: 0.6

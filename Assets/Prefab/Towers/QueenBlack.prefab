@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 300223222490024373}
-  - component: {fileID: 226157695338882234}
   m_Layer: 7
   m_Name: Queen
   m_TagString: Untagged
@@ -33,25 +32,6 @@ Transform:
   - {fileID: 6908334042694370933}
   m_Father: {fileID: 5744254813386437910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &226157695338882234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458074650649839767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ac0e8b28051204a8df6259069f0ef3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeToRook: 0
-  rotationSpeed: 86
-  bullet: {fileID: 6399670995409857385, guid: 60af5b4ef38345348832a107314de0c5, type: 3}
-  shootTime: 0.1
-  waitTime: 1
-  amountOfBullets: 5
-  rookMoreBullets: 3
 --- !u!1 &6858464630054899985
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5744254813386437910}
+  - component: {fileID: 5755542917449837187}
   m_Layer: 7
   m_Name: QueenBlack
   m_TagString: ChessPiece
@@ -84,6 +65,25 @@ Transform:
   - {fileID: 300223222490024373}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5755542917449837187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858464630054899985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ac0e8b28051204a8df6259069f0ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeToRook: 0
+  rotationSpeed: 86
+  bullet: {fileID: 6399670995409857385, guid: 60af5b4ef38345348832a107314de0c5, type: 3}
+  shootTime: 0.7
+  waitTime: 0
+  amountOfBullets: 5
+  rookMoreBullets: 3
 --- !u!1001 &3279838143275263618
 PrefabInstance:
   m_ObjectHideFlags: 0

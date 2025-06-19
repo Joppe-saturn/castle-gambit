@@ -23,7 +23,7 @@ public class Knight : ChessPiecesBase
 
     private void Update()
     {
-        CheckForRook(_dataManager);
+        CheckForRook(_dataManager, transform.position);
         RookModifiers();
     }
 

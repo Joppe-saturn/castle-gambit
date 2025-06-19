@@ -140,11 +140,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeToRook: 0
+  _isWhite: 1
   _colliders:
   - {fileID: 7718782045813299428}
   - {fileID: 4738628988034512275}
   _attackSpeed: 1.5
-  _rookModifier: 0.7
+  _cooldownTime: 3
+  _rookCooldownTime: 0.6
 --- !u!1001 &3208753491720184522
 PrefabInstance:
   m_ObjectHideFlags: 0

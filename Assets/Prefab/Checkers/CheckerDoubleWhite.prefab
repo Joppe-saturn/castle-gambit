@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5158859212449468287}
   - component: {fileID: 7007548891063043578}
   - component: {fileID: 5010780531493783329}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CheckerDoubleWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,9 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38e7696aa5e0a04baf9a78d89826983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWhite: 0
   _speed: 0.1
+  _bishopFreezeTime: 2
+  _bishopFreezeStrenght: 0.3
+  _singleCheckerMesh: {fileID: -3496646306354768811, guid: f671c2038bd692a41809b909940bc202, type: 3}
   _health: 2
-  _meshRenderer: {fileID: 3831387756042325578}
   _slimeMaterial: {fileID: 2100000, guid: b2917ece8fc9eb34db8c64d27654d3a6, type: 2}
   _moneyOnDeath: 20
 --- !u!65 &5010780531493783329
@@ -83,7 +86,7 @@ GameObject:
   - component: {fileID: 355572619374131354}
   - component: {fileID: 4464850167358732507}
   - component: {fileID: 3831387756042325578}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Checkers_Double_White
   m_TagString: Untagged
   m_Icon: {fileID: 0}

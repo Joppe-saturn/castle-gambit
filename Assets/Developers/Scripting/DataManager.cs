@@ -99,4 +99,6 @@ public class DataManager : MonoBehaviour
     }
 
     public List<GameObject> Rooks = new List<GameObject>();
+    public List<GameObject> BlackCheckers = new List<GameObject>();
+    public List<GameObject> WhiteCheckers = new List<GameObject>();
 }

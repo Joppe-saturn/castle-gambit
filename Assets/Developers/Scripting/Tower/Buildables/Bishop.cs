@@ -30,7 +30,7 @@ public class Bishop : ChessPiecesBase
 
     private void Update()
     {
-        CheckForRook(_dataManager);
+        CheckForRook(_dataManager, transform.position);
     }
 
     private IEnumerator AttackCycle()
