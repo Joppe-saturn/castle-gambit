@@ -101,4 +101,17 @@ public class DataManager : MonoBehaviour
     public List<GameObject> Rooks = new List<GameObject>();
     public List<GameObject> BlackCheckers = new List<GameObject>();
     public List<GameObject> WhiteCheckers = new List<GameObject>();
+
+    private bool _isDead;
+    public bool IsDead
+    {
+        get
+        {
+            return _isDead;
+        }
+        set
+        {
+            _isDead = value;
+        }
+    }
 }

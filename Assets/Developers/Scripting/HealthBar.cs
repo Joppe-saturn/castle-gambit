@@ -11,6 +11,8 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         _dataManager = DataManager.GetInstance();
+        _dataManager.IsDead = false;
+
         _dataManager.Health = _startHealth;
         _slider = GetComponent<Slider>();
     }
@@ -25,7 +27,7 @@ public class HealthBar : MonoBehaviour
         _slider.value = _dataManager.Health / _startHealth;
         if(_dataManager.Health <= 0) 
         {
-            Debug.Log("Death");
+            _dataManager.IsDead = true;
         }
     }
 
