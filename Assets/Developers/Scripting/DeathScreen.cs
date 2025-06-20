@@ -27,6 +27,8 @@ public class DeathScreen : MonoBehaviour
 
     private IEnumerator ShowDeathScreen()
     {
+        deathScreen.SetActive(true);
+
         while (Time.timeScale > 0.01f)
         {
             Time.timeScale /= slowDownDeath;
@@ -34,12 +36,17 @@ public class DeathScreen : MonoBehaviour
         }
 
         Time.timeScale = 0f;
-        deathScreen.SetActive(true);
     }
 
     public void Retry()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Home()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
 }

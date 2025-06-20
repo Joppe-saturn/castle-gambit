@@ -10,19 +10,40 @@ public class ShopMover : MonoBehaviour
     [SerializeField] private float boxWaitTime;
     private Vector3 closePos;
     [SerializeField] private RectTransform arrow;
+    [SerializeField] private RectTransform cancelButton;
+    private Vector3 cancelButtonOpenPos;
+    private Vector3 cancelButtonClosePos;
+    private bool isPlacing = false;
 
     private Coroutine moveShop;
     private Coroutine rotateArrow;
+    private Coroutine moveCancelButton;
 
     protected bool isOpen = true;
 
     private RectTransform rectTransform;
+
+    private DataManager _dataManager;
 
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
         openPos = rectTransform.localPosition;
         closePos = new Vector3(openPos.x, closePosY, 0);
+        _dataManager = DataManager.GetInstance();
+        
+        cancelButtonOpenPos = cancelButton.localPosition;
+        cancelButtonClosePos = new Vector3(cancelButtonOpenPos.x, closePosY, 0);
+        cancelButton.localPosition = cancelButtonClosePos;
+    }
+
+    private void Update()
+    {
+        if (isPlacing && _dataManager.CurrentTower == null)
+        {
+            isPlacing = false;
+            StartCoroutine(LerpCancelButton());
+        }
     }
 
     public void CloseShop()
@@ -42,9 +63,15 @@ public class ShopMover : MonoBehaviour
             StopCoroutine(moveShop);
             StopCoroutine(rotateArrow);
         }
+        if (moveCancelButton != null)
+        {
+            StopCoroutine(moveCancelButton);
+        }
 
         moveShop = StartCoroutine(LerpShop());
         rotateArrow = StartCoroutine(RotateArrow());
+
+        moveCancelButton = StartCoroutine(LerpCancelButton());
     }
 
     private IEnumerator DissapearBox()
@@ -88,6 +115,37 @@ public class ShopMover : MonoBehaviour
             while (rectTransform.localPosition != closePos && !isOpen)
             {
                 rectTransform.localPosition += (closePos - rectTransform.localPosition) / speed;
+                yield return new WaitForSeconds(0.02f);
+            }
+        }
+    }
+
+    public void Cancel()
+    {
+        _dataManager.CurrentTower = null;
+        isPlacing = false;
+
+        StartCoroutine(LerpCancelButton());
+    }
+
+    private IEnumerator LerpCancelButton()
+    {
+        yield return null;
+        if (!isOpen && _dataManager.CurrentTower != null)
+        {
+            isPlacing = true;
+
+            while (cancelButton.localPosition != cancelButtonOpenPos)
+            {
+                cancelButton.localPosition += (cancelButtonOpenPos - cancelButton.localPosition) / speed;
+                yield return new WaitForSeconds(0.02f);
+            }
+        }
+        else
+        {
+            while (cancelButton.localPosition != cancelButtonClosePos)
+            {
+                cancelButton.localPosition += (cancelButtonClosePos - cancelButton.localPosition) / speed;
                 yield return new WaitForSeconds(0.02f);
             }
         }
