@@ -5626,7 +5626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6da1938104bec42b9b24fed7c1780f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicLength: 124
+  musicLength: 123.878
   firstMusicClip: {fileID: 1491045829}
   secondMusicSource: {fileID: 1491045831}
 --- !u!82 &1491045831

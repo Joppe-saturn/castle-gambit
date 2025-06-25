@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    [SerializeField] private float musicLength = 124.578f;
+    [SerializeField] private float musicLength = 123.878 //124.578f;
     [SerializeField] private AudioSource firstMusicClip;
     [SerializeField] private AudioSource secondMusicSource;
 
