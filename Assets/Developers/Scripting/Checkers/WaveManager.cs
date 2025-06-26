@@ -29,7 +29,11 @@ public class WaveManager : MonoBehaviour
 
     [SerializeField] public Level level;
 
+    public bool hasSpawnedEverything = false;
+
     private DataManager _dataManager;
+    private GameObject newestChecker;
+
     private void Start()
     {
         _dataManager = DataManager.GetInstance();
@@ -48,8 +52,17 @@ public class WaveManager : MonoBehaviour
             {
                 Enemy currentChecker = level.waves[i].checkers[j];
                 yield return new WaitForSeconds(currentChecker.waitTime);
-                Instantiate(currentChecker.checker, level.spawnpoints[currentChecker.spawnpoint], Quaternion.identity);
+                newestChecker = Instantiate(currentChecker.checker, level.spawnpoints[currentChecker.spawnpoint], Quaternion.identity);
             }
         }
+
+        while (newestChecker != null)
+        {
+            yield return new WaitForSeconds(1f);
+        }
+
+        yield return null;
+
+        hasSpawnedEverything = true;
     }
 }

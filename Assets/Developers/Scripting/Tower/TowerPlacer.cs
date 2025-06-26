@@ -32,10 +32,12 @@ public class TowerPlacer : MonoBehaviour
 
     private ShopMover shopMover;
 
+    [SerializeField] private bool startColor;
+
     private void Start()
     {
         _dataManager = DataManager.GetInstance();
-        _dataManager.IsPlacingWhite = true;
+        _dataManager.IsPlacingWhite = startColor;
 
         colorButtonImage = colorButton.GetComponent<Image>();
         colorButtonText = colorButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
