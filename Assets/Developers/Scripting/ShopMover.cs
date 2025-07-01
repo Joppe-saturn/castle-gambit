@@ -11,7 +11,7 @@ public class ShopMover : MonoBehaviour
     private Vector3 closePos;
     [SerializeField] private RectTransform arrow;
     [SerializeField] private RectTransform cancelButton;
-    private Vector3 cancelButtonOpenPos;
+    public Vector3 cancelButtonOpenPos;
     private Vector3 cancelButtonClosePos;
     private bool isPlacing = false;
 
@@ -49,6 +49,14 @@ public class ShopMover : MonoBehaviour
     public void CloseShop()
     {
         if (isOpen)
+        {
+            ChangeShopPos();
+        }
+    }
+
+    public void OpenShop()
+    {
+        if(!isOpen)
         {
             ChangeShopPos();
         }
@@ -125,7 +133,7 @@ public class ShopMover : MonoBehaviour
         _dataManager.CurrentTower = null;
         isPlacing = false;
 
-        StartCoroutine(LerpCancelButton());
+        OpenShop();
     }
 
     private IEnumerator LerpCancelButton()
@@ -135,7 +143,7 @@ public class ShopMover : MonoBehaviour
         {
             isPlacing = true;
 
-            while (cancelButton.localPosition != cancelButtonOpenPos)
+            while (cancelButton.localPosition != cancelButtonOpenPos && !isOpen)
             {
                 cancelButton.localPosition += (cancelButtonOpenPos - cancelButton.localPosition) / speed;
                 yield return new WaitForSeconds(0.02f);
@@ -143,7 +151,7 @@ public class ShopMover : MonoBehaviour
         }
         else
         {
-            while (cancelButton.localPosition != cancelButtonClosePos)
+            while (cancelButton.localPosition != cancelButtonClosePos && isOpen)
             {
                 cancelButton.localPosition += (cancelButtonClosePos - cancelButton.localPosition) / speed;
                 yield return new WaitForSeconds(0.02f);

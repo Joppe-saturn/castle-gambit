@@ -6,9 +6,12 @@ public class TowerTile : MonoBehaviour, IClickable
     private DataManager _dataManager;
     private GameObject placedTower;
 
+    private ShopMover _shopMover;
+
     private void Start()
     {
         _dataManager = DataManager.GetInstance();
+        _shopMover = FindFirstObjectByType<ShopMover>();
     }
 
     public void OnClick()
@@ -30,6 +33,7 @@ public class TowerTile : MonoBehaviour, IClickable
                         currentPiece = _dataManager.CurrentTower.blackObject;
                     }
                     placedTower = Instantiate(currentPiece, transform.position, Quaternion.identity);
+                    _shopMover.OpenShop();
                     _dataManager.CurrentTower = null;
                     _dataManager.State = DataManager.ShopState.Closed;
                 }
