@@ -612,7 +612,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1551906507}
         m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
+        m_MethodName: SceneSwitchWithCheck
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -742,19 +742,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 322848130}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1551906507}
-        m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &322848130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,7 +756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1011,19 +999,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 504723048}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1551906507}
-        m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &504723048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1037,7 +1013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1144,19 +1120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 583864095}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1551906507}
-        m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &583864095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,7 +1134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1767,7 +1731,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1551906507}
         m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
+        m_MethodName: SceneSwitchWithCheck
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1897,19 +1861,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 917515127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1551906507}
-        m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &917515127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1923,7 +1875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2166,19 +2118,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1206384501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1551906507}
-        m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1206384501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2192,7 +2132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2420,19 +2360,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1267787057}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1551906507}
-        m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1267787057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2446,7 +2374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3077,19 +3005,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1609012961}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1551906507}
-        m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1609012961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3103,7 +3019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3210,19 +3126,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1642805208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1551906507}
-        m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1642805208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3236,7 +3140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3569,7 +3473,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1551906507}
         m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
+        m_MethodName: SceneSwitchWithCheck
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3702,12 +3606,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1551906507}
         m_TargetAssemblyTypeName: Sceneswitch, Assembly-CSharp
-        m_MethodName: SceneSwitch
+        m_MethodName: SceneSwitchWithCheck
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

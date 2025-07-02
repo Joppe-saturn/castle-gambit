@@ -6050,6 +6050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreen: {fileID: 800937783}
+  level: 2
 --- !u!114 &1491045833
 MonoBehaviour:
   m_ObjectHideFlags: 0

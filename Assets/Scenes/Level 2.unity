@@ -5010,7 +5010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7351731691240530495, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
       propertyPath: level.waves.Array.data[0].moneyGainedFromWave
-      value: 10000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7351731691240530495, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
       propertyPath: level.waves.Array.data[1].checkers.Array.size
@@ -5815,6 +5815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreen: {fileID: 416241067}
+  level: 4
 --- !u!114 &1491045837
 MonoBehaviour:
   m_ObjectHideFlags: 0

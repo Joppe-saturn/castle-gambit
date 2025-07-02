@@ -5176,7 +5176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5292436286324896715, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
       propertyPath: _developerMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7351731691240530495, guid: 9a02ff06f1e0ea54c963fac6977b0f64, type: 3}
       propertyPath: level.waves.Array.size
@@ -6021,6 +6021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreen: {fileID: 800937783}
+  level: 1
 --- !u!114 &1491045833
 MonoBehaviour:
   m_ObjectHideFlags: 0

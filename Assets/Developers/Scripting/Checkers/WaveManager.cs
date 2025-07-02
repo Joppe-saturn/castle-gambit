@@ -32,7 +32,7 @@ public class WaveManager : MonoBehaviour
     public bool hasSpawnedEverything = false;
 
     private DataManager _dataManager;
-    private GameObject newestChecker;
+    private List<GameObject> newestChecker = new List<GameObject>();
 
     private void Start()
     {
@@ -52,12 +52,27 @@ public class WaveManager : MonoBehaviour
             {
                 Enemy currentChecker = level.waves[i].checkers[j];
                 yield return new WaitForSeconds(currentChecker.waitTime);
-                newestChecker = Instantiate(currentChecker.checker, level.spawnpoints[currentChecker.spawnpoint], Quaternion.identity);
+                newestChecker.Add(Instantiate(currentChecker.checker, level.spawnpoints[currentChecker.spawnpoint], Quaternion.identity));
             }
         }
+        
+        bool hasBeatenLevel = false;
 
-        while (newestChecker != null)
+        while (!hasBeatenLevel)
         {
+            bool completeCheck = true;
+
+            for (int i = 0; i < newestChecker.Count; i++)
+            {
+                if(newestChecker[i] != null)
+                {
+                    completeCheck = false;
+                    break;
+                }
+            }
+
+            hasBeatenLevel = completeCheck;
+
             yield return new WaitForSeconds(1f);
         }
 
