@@ -32,6 +32,9 @@ public class CheckerMovement : MonoBehaviour
     private int _index;
     private float _yAxis;
 
+    private AudioSource _audioSource;
+    private bool isAlive = true;
+
     private void Start()
     {
         _meshRenderer = transform.GetChild(0).GetComponent<MeshRenderer>();
@@ -41,6 +44,8 @@ public class CheckerMovement : MonoBehaviour
         _dataManager = DataManager.GetInstance();
         _transformList = _dataManager.Paths(0).ToList();
         _yAxis = transform.position.y;
+
+        _audioSource = GetComponent<AudioSource>();
 
         if(isWhite == true)
         {
@@ -56,7 +61,10 @@ public class CheckerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Movement();
+        if(isAlive == true)
+        {
+            Movement();
+        }
     }
 
     private void Update()
@@ -105,6 +113,7 @@ public class CheckerMovement : MonoBehaviour
     {
         if (other.CompareTag("ChessPiece"))
         {
+            _audioSource.Play();
             _health--;
         }
         else if (other.CompareTag("SlimeBullet"))
@@ -117,11 +126,21 @@ public class CheckerMovement : MonoBehaviour
             _meshFilter.mesh = _singleCheckerMesh;
         }
 
-        if (_health <= 0)
+        if (_health <= 0 && isAlive)
         {
-            _dataManager.Money += _moneyOnDeath;
-            Destroy(gameObject);
+            StartCoroutine(Die());
         }
+    }
+
+    private IEnumerator Die()
+    {
+        _dataManager.Money += _moneyOnDeath;
+        isAlive = false;
+        transform.position = new Vector3(0f, -10f, 0f);
+
+        yield return new WaitForSeconds(1);
+
+        Destroy(gameObject);
     }
 
     private IEnumerator Slimed() // Gebeurt als hij word geraakt met een wapen van de bishop.
