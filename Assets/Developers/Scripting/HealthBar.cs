@@ -5,8 +5,12 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private float _startHealth;
+    [SerializeField] private Rigidbody king;
     private DataManager _dataManager;
     private Slider _slider;
+
+    private float _lastUpdatedhealth;
+    private AudioSource _audioSource;
 
     private void Start()
     {
@@ -15,6 +19,10 @@ public class HealthBar : MonoBehaviour
 
         _dataManager.Health = _startHealth;
         _slider = GetComponent<Slider>();
+
+        _audioSource = GetComponent<AudioSource>();
+        _lastUpdatedhealth = _startHealth;
+        _slider.value = _lastUpdatedhealth / _startHealth;
     }
 
     private void Update()
@@ -24,10 +32,20 @@ public class HealthBar : MonoBehaviour
     
     private void UpdateHealthBar()
     {
-        _slider.value = _dataManager.Health / _startHealth;
-        if(_dataManager.Health <= 0) 
+        float health = _dataManager.Health;
+
+        if (health != _lastUpdatedhealth)
         {
-            _dataManager.IsDead = true;
+            _lastUpdatedhealth = health;
+
+            _audioSource.Play();
+
+            _slider.value = health / _startHealth;
+            if (health <= 0)
+            {
+                _dataManager.IsDead = true;
+                king.isKinematic = false;
+            }
         }
     }
 
