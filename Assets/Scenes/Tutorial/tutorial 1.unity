@@ -7617,12 +7617,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5091094468941552881, guid: 4f6432b813040b740bb0b2374e0c42f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6389985695521853577, guid: 4f6432b813040b740bb0b2374e0c42f1, type: 3}
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6389985695521853577, guid: 4f6432b813040b740bb0b2374e0c42f1, type: 3}
       propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728115556693339031, guid: 4f6432b813040b740bb0b2374e0c42f1, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

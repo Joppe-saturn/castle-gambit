@@ -22,7 +22,6 @@ public class HealthBar : MonoBehaviour
 
         _audioSource = GetComponent<AudioSource>();
         _lastUpdatedhealth = _startHealth;
-        _slider.value = _lastUpdatedhealth / _startHealth;
     }
 
     private void Update()
@@ -33,6 +32,8 @@ public class HealthBar : MonoBehaviour
     private void UpdateHealthBar()
     {
         float health = _dataManager.Health;
+        
+        _slider.value = health / _startHealth;
 
         if (health != _lastUpdatedhealth)
         {
@@ -40,7 +41,6 @@ public class HealthBar : MonoBehaviour
 
             _audioSource.Play();
 
-            _slider.value = health / _startHealth;
             if (health <= 0)
             {
                 _dataManager.IsDead = true;
