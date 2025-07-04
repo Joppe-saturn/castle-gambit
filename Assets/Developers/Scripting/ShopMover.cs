@@ -25,6 +25,8 @@ public class ShopMover : MonoBehaviour
 
     private DataManager _dataManager;
 
+    private AudioSource audioSource;
+
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -35,6 +37,8 @@ public class ShopMover : MonoBehaviour
         cancelButtonOpenPos = cancelButton.localPosition;
         cancelButtonClosePos = new Vector3(cancelButtonOpenPos.x, closePosY, 0);
         cancelButton.localPosition = cancelButtonClosePos;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -130,6 +134,8 @@ public class ShopMover : MonoBehaviour
 
     public void Cancel()
     {
+        audioSource.Play();
+
         _dataManager.CurrentTower = null;
         isPlacing = false;
 

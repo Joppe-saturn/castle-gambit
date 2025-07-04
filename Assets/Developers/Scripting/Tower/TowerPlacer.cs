@@ -34,6 +34,8 @@ public class TowerPlacer : MonoBehaviour
 
     [SerializeField] private bool startColor;
 
+    [SerializeField] private AudioSource buttonClick;
+
     private void Start()
     {
         _dataManager = DataManager.GetInstance();
@@ -49,6 +51,8 @@ public class TowerPlacer : MonoBehaviour
     {
         Tower currentTower = towers[tower];
         
+        buttonClick.Play();
+
         if (_dataManager.Money >= currentTower.Price)
         {
             shopMover.CloseShop();
@@ -60,6 +64,7 @@ public class TowerPlacer : MonoBehaviour
     {
         if (!isLerping)
         {
+            buttonClick.Play();
             _dataManager.IsPlacingWhite = !_dataManager.IsPlacingWhite;
             StartCoroutine(ColorLerp());
         }
